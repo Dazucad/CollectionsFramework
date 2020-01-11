@@ -59,7 +59,7 @@ public class Solution {
     }
 
     void task5() {
-        MyIterator myIterator = new MyIterator(stringsList);
+        Iterator<String> myIterator = new MyIterator(stringsList);
         System.out.println("\nСтроки в обратном порядке с использованием своего итератора:");
         while (myIterator.hasNext()) {
             System.out.println(myIterator.next());
