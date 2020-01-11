@@ -7,10 +7,11 @@ public class MyIterator implements Iterator<String>, Iterable<String> {
     private List<String> arrayList;
     private ListIterator<String> listIterator;
 
-     MyIterator(List<String> arrayList){
-         this.arrayList=arrayList;
-         listIterator=this.arrayList.listIterator(arrayList.size());
-     }
+    MyIterator(List<String> arrayList) {
+        this.arrayList = arrayList;
+        listIterator = this.arrayList.listIterator(arrayList.size());
+    }
+
     @Override
     public boolean hasNext() {
         return listIterator.hasPrevious();
@@ -22,6 +23,11 @@ public class MyIterator implements Iterator<String>, Iterable<String> {
     }
 
     @Override
+    public Iterator<String> iterator() {
+        return listIterator;
+    }
+
+    /*@Override
     public void remove() {
         listIterator.remove();
     }
@@ -32,11 +38,6 @@ public class MyIterator implements Iterator<String>, Iterable<String> {
     }
 
     @Override
-    public Iterator<String> iterator() {
-        return listIterator;
-    }
-
-    @Override
     public void forEach(Consumer<? super String> action) {
         listIterator.forEachRemaining(action);
     }
@@ -44,5 +45,5 @@ public class MyIterator implements Iterator<String>, Iterable<String> {
     @Override
     public Spliterator<String> spliterator() {
         return arrayList.spliterator();
-    }
+    }*/
 }
