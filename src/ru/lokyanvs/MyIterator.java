@@ -4,12 +4,12 @@ import java.util.*;
 import java.util.function.Consumer;
 
 public class MyIterator implements Iterator<String>, Iterable<String> {
-    private List<String> arrayList;
+    //private List<String> arrayList;
     private ListIterator<String> listIterator;
 
     MyIterator(List<String> arrayList) {
-        this.arrayList = arrayList;
-        listIterator = this.arrayList.listIterator(arrayList.size());
+        //this.arrayList = arrayList;
+        listIterator = arrayList.listIterator(arrayList.size());
     }
 
     @Override
