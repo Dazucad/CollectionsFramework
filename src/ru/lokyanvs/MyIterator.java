@@ -3,7 +3,7 @@ package ru.lokyanvs;
 import java.util.*;
 import java.util.function.Consumer;
 
-public class MyIterator implements Iterator<String>, Iterable<String> {
+public class MyIterator implements Iterator<String> {
     //private List<String> arrayList;
     private ListIterator<String> listIterator;
 
@@ -22,12 +22,12 @@ public class MyIterator implements Iterator<String>, Iterable<String> {
         return listIterator.previous();
     }
 
-    @Override
+    /*@Override
     public Iterator<String> iterator() {
         return listIterator;
     }
 
-    /*@Override
+    @Override
     public void remove() {
         listIterator.remove();
     }
